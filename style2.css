@@ -1,0 +1,57 @@
+/* Alert info */
+.alert {
+    margin-bottom: 0px;
+   }
+.alert-info {
+    color: #ffffff;
+    background-color: #bbff00;
+    border-color: #bee5eb;  
+}
+
+.alert p{
+    text-align: center; 
+}
+
+.navbar img{
+    height: 50px;
+}
+
+
+.removed button {
+    background: #bbff00;
+    color: #ffffff;
+}
+.removed button:hover {
+background-color: #bbff00;
+    color: #ffffff;
+}
+
+.carousel-control-prev-icon{
+    background-color: #bbff00;
+    border-radius: 12px;
+
+}
+.carousel-control-next-icon{
+    background-color: #bbff00;
+    border-radius: 12px;
+}
+
+.custom-select{
+    width: auto;
+}
+
+
+.add-to-cart button{
+    background-color: #bbff00;
+    border: #bbff00;
+}
+.add-to-cart button:hover{
+    background-color: #bbff00;
+    color: #ffffff;
+
+}
+
+
+.my-footer{
+background: #bbff00;
+}

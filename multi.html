@@ -1,0 +1,282 @@
+<!doctype html></doctype>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="mstyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <title>Frenzy Store</title>
+    </head>
+<body>
+    <nav class="navbar">
+        <img class="navbar-brand" src="MP/unicorn.png" alt="">
+        <div class="logo"><h1>Frenzy Store</h1></div>
+    <ul class="menu">
+        <li><a href="multi.html" class="active">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="register.html">Sign In</a></li>
+        <li><a href="cartt.html"><i class="fas fa-shopping-cart"></i></a></li>
+    </ul>
+
+    <div class="bar">
+        <input type="search" placeholder="Type to search">
+    </div>
+
+    <div class="menu-btn">
+        <i class=""fa fa-bars></i>
+    </div> 
+    </nav>
+    
+<div class="container">
+    <div class="slider">
+        <div class="image">
+            <img src="MP/okt3.jpg">
+
+            <div class="Button">
+                <a href="okt.html" class="bttn">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product-details">
+            <div class="product-name">
+                <a href="#">Oversized Korean Tee</a>
+                <span>New Arrival</span>
+            </div>
+            <a href="#" class="price">&#8377;500</a>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="image">
+            <img src="MP/pnt1.jpg">
+
+            <div class="Button">
+                <a href="pnt.html" class="bttn">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product-details">
+            <div class="product-name">
+                <a href="">Formal Office Pants</a>
+                <span>New Arrival</span>
+            </div>
+            <a href="" class="price">&#8377;700</a>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="image">
+            <img src="MP/bs1.webp">
+
+            <div class="Button">
+                <a href="bs.html" class="bttn">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product-details">
+            <div class="product-name">
+                <a href="#">Bluetooth Speaker</a>
+                <span>New Arrival</span>
+            </div>
+            <a href="#" class="price">&#8377;4500</a>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="image">
+            <img src="MP/crgo.jpg">
+
+            <div class="Button">
+                <a href="" class="bttn">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product-details">
+            <div class="product-name">
+                <a href="#">Cargo Pants</a>
+                <span>New Arrival</span>
+            </div>
+            <a href="#" class="price">&#8377;1200</a>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="image">
+            <img src="MP/frmlst.jpeg">
+
+            <div class="Button">
+                <a href="" class="bttn">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product-details">
+            <div class="product-name">
+                <a href="#">Black Shirt</a>
+                <span>New Arrival</span>
+            </div>
+            <a href="#" class="price">&#8377;7000</a>
+        </div>
+    </div>
+</div>
+<i class="fas fa-chevron-right arrow"></i>
+
+<script>
+    const arrows = document.querySelectorAll(".arrow");
+    const container= document.querySelectorAll(".container");
+
+    arrows.forEach((arrow, i) => {
+        const ItemNo = container[i].querySelectorAll("img").length;
+        let clickitem = 0;
+        arrow.addEventListener("click", () => {
+            clickitem++;
+            if(ItemNo - (5 + clickitem) >= 0){
+                container[i].style.transform = `translateX(${
+                    container[i].computedStyleMap().get("transform")[0].x.value
+                    - 455}px)`;
+            }else{
+                container[i].style.transform = "translateX(0)";
+                clickitem = 0;
+            }
+        });
+    });
+</script>
+
+
+<h1 class="pheading"> Our Lastest Products</h1>
+
+    <section class="sec">
+        <div class="products">
+
+            <div class="card">
+                <div class="img"><img src="MP/crocky1.webp" alt=""></div>
+                <div class="desc">Men</div>
+                <div class="title">Crocs</div>
+                <div class="box">
+                <div class="price">Rs.2500</div>
+                <button class="btn"><a href="crocs.html"> Buy Now </a></button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img"><img src="MP/asus.jpg" alt=""></div>
+            <div class="desc">Electronics</div>
+            <div class="title">ASUS Laptop</div>
+            <div class="box">
+            <div class="price">Rs.80,000</div>
+            <button class="btn"><a href="tufdash.html"> Buy Now </a></button>
+        </div>
+    </div>
+            
+    <div class="card">
+        <div class="img"><img src="MP/dumb1.jpg" alt=""></div>
+        <div class="desc">Gym</div>
+        <div class="title">Dumbbell</div>
+        <div class="box">
+        <div class="price">Rs.300</div>
+        <button class="btn"><a href="dumbb.html"> Buy Now </a></button>
+    </div>
+</div>
+
+<div class="card">
+    <div class="img"><img src="MP/hb5.jpg" alt=""></div>
+    <div class="desc">Women</div>
+    <div class="title">Handbag</div>
+    <div class="box">
+    <div class="price"><Rs class="2300"></Rs></div>
+    <button class="btn"><a href="handbag.html"> Buy Now </a></button>
+</div>
+</div>
+
+<div class="card">
+    <div class="img"><img src="MP/watch1.jpg" alt=""></div>
+    <div class="desc">Men</div>
+    <div class="title">Men's Watch</div>
+    <div class="box">
+    <div class="price">Rs. 4500</div>
+    <button class="btn"><a href="watch.html"> Buy Now </a></button>
+</div>
+</div>
+
+<div class="card">
+    <div class="img"><img src="MP/nb.jpg" alt=""></div>
+    <div class="desc">School</div>
+    <div class="title">Notebook</div>
+    <div class="box">
+    <div class="price">Rs.100</div>
+    <button class="btn">Buy Now</button>
+</div>
+</div>
+
+<div class="card">
+    <div class="img"><img src="MP/tsh.jpeg" alt=""></div>
+    <div class="desc">Apparel</div>
+    <div class="title">Anime Tshirt</div>
+    <div class="box">
+    <div class="price">Rs.500</div>
+    <button class="btn">Buy Now</button>
+</div>
+</div>
+
+<div class="card">
+    <div class="img"><img src="MP/op.jpg" alt=""></div>
+    <div class="desc">Electronics</div>
+    <div class="title">Oneplus Mobile</div>
+    <div class="box">
+    <div class="price">Rs.35,000</div>
+    <button class="btn">Buy Now</button>
+</div>
+</div>
+      
+<footer class="footer">
+    <div class="containerr">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="contact.html">Return</a></li>
+                    <li><a href="contact.html">Cashback</a></li>
+                    <li><a href="contact.html">Affiliate Marketing</a></li>
+                    <li><a href="contact.html">Others</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">FAQ</a></li>
+                    <li><a href="contact.html">Complaint</a></li>
+                    <li><a href="about.html">Careers</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="contact.html">Help Center</a></li>
+                    <li><a href="about.html">Privacy Policy</a></li>
+                    <li><a href="about.html">Terms</a></li>
+                    <li><a href="register.html">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2FDrushtanttPatil"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/drushtantt/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/drushtant-patil-2a8068248"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+ 
+
+
+
+</body>    
+</html>
